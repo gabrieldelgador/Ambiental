@@ -1,4 +1,10 @@
 from django.db import models
 
 # Create your models here. 
-#modelo 1 botate
+class Rios(models.Model):
+    name=models.CharField(max_lenght=200)
+    latitud=models.DecimalField(max_digits=9, decimal_places=6)
+    logitud=models.DecimalField(max_digits=9, decimal_places=6)
+    
+    def __str__(self):
+        return self.name
